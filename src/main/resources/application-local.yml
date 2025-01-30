@@ -14,7 +14,8 @@ auto-table:
   # 启用自动维护表功能
   enable: true
   # 自动删除名称不匹配的索引
-  autoDropIndex: true
+  #autoDropIndex: true
+  autoDropIndex: false
   # 建表的时候，父类的字段排序是在子类后面还是前面
   superInsertPosition: before
   # 模型包路径
