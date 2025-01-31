@@ -13,7 +13,9 @@ import com.cool.core.plugin.service.CoolPluginService;
 import com.cool.core.request.R;
 import com.cool.core.util.CoolPluginInvokers;
 import com.cool.modules.base.dto.sys.BaseSysLoginDto;
+import com.cool.modules.base.dto.sys.BaseSysRegisterDto;
 import com.cool.modules.base.service.sys.BaseSysLoginService;
+import com.cool.modules.base.service.sys.BaseSysRegisterService;
 import com.cool.modules.plugin.entity.PluginInfoEntity;
 import io.micrometer.common.util.StringUtils;
 import io.swagger.v3.oas.annotations.Operation;
@@ -33,6 +35,7 @@ import org.springframework.web.bind.annotation.*;
 public class AdminBaseOpenController {
 
     final private BaseSysLoginService baseSysLoginService;
+    final private BaseSysRegisterService baseSysRegisterService;
     final private CoolPluginService coolPluginService;
     final private CoolEps coolEps;
     final private CoolCache coolCache;
@@ -53,6 +56,12 @@ public class AdminBaseOpenController {
     @PostMapping("/login")
     public R login(@RequestBody BaseSysLoginDto baseSysLoginDto) {
         return R.ok(baseSysLoginService.login(baseSysLoginDto));
+    }
+
+    @Operation(summary = "注册")
+    @PostMapping("/register")
+    public R register(@RequestBody BaseSysRegisterDto baseSysRegisterDto) {
+        return R.ok(baseSysRegisterService.register(baseSysRegisterDto));
     }
 
     @Operation(summary = "验证码")

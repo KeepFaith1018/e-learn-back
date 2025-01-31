@@ -134,6 +134,7 @@ public class BaseSysUserServiceImpl extends BaseServiceImpl<BaseSysUserMapper, B
         BaseSysUserEntity check = getOne(
             QueryWrapper.create().eq(BaseSysUserEntity::getUsername, entity.getUsername()));
         CoolPreconditions.check(check != null, "用户名已存在");
+
         entity.setPassword(MD5.create().digestHex(entity.getPassword()));
         super.add(requestParams, entity);
         return entity.getId();
