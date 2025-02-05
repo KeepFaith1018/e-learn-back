@@ -1,12 +1,19 @@
 package com.cool.modules.course.entity;
 
 import com.cool.core.base.BaseEntity;
+import com.cool.modules.chapter.entity.ChapterInfoEntity;
+import com.cool.modules.discussion.entity.DiscussionGroupEntity;
+import com.cool.modules.exam.entity.ExamPaperInfoEntity;
+import com.cool.modules.resource.entity.ResourceInfoEntity;
 import com.cool.modules.user.entity.UserInfoEntity;
+import com.mybatisflex.annotation.RelationOneToMany;
 import com.mybatisflex.annotation.RelationOneToOne;
 import com.mybatisflex.annotation.Table;
 import com.tangzc.mybatisflex.autotable.annotation.ColumnDefine;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -29,8 +36,32 @@ public class CourseInfoEntity extends BaseEntity<CourseInfoEntity> {
     private String introduction;
 
     @RelationOneToOne(
-            selfField = "teacherUsername", // 当前实体的字段
-            targetField = "username"       // 目标实体的字段
+            selfField = "teacherUsername",
+            targetField = "username"
     )
-    private UserInfoEntity teacherInfo; // 关联的教师信息
+    private UserInfoEntity teacherInfo;
+
+    @RelationOneToMany(
+            selfField = "id",
+            targetField = "courseId"
+    )
+    private List<ResourceInfoEntity> resources;
+
+    @RelationOneToMany(
+            selfField = "id",
+            targetField = "courseId"
+    )
+    private List<ChapterInfoEntity> chapters;
+
+    @RelationOneToMany(
+            selfField = "id",
+            targetField = "courseId"
+    )
+    private List<DiscussionGroupEntity> discussionGroups;
+
+    @RelationOneToMany(
+            selfField = "id",
+            targetField = "courseId"
+    )
+    private List<ExamPaperInfoEntity> examPapers;
 }
