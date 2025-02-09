@@ -11,7 +11,7 @@
         <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cool</groupId>
-    <artifactId>cool-admin</artifactId>
+    <artifactId>learning-back</artifactId>
     <version>7.1.0</version>
     <name>cool-admin</name>
     <description>cool admin for java</description>

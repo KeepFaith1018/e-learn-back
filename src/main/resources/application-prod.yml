@@ -24,4 +24,4 @@ springdoc:
 # 设置日志级别
 logging:
   level:
-    com.cool: error
+    com.learning: error

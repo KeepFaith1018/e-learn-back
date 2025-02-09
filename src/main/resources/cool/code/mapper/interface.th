@@ -1,7 +1,7 @@
-package com.cool.modules.[(${module})].mapper[(${subModule}?'.'+${subModule}:'')];
+package com.learning.modules.[(${module})].mapper[(${subModule}?'.'+${subModule}:'')];
 
 import com.mybatisflex.core.BaseMapper;
-import com.cool.modules.[(${module})].entity[(${subModule}?'.'+${subModule}:'')].[(${entity})]Entity;
+import com.learning.modules.[(${module})].entity[(${subModule}?'.'+${subModule}:'')].[(${entity})]Entity;
 
 /**
  * [(${name})]

@@ -8,7 +8,7 @@ server:
 
 spring:
   application:
-    name: cool-admin-java
+    name: learning-back
   profiles:
     active: @spring.active@
   thymeleaf:
@@ -76,10 +76,12 @@ ignored:
   # 忽略后台鉴权url
   adminAuthUrls:
     - /
+    - /upload\**
     - /upload/**
     - /actuator/**
     - /download/**
     - /static/**
+    - /assets/public/**
     - /favicon.ico
     - /v3/api-docs/**
     - /swagger
