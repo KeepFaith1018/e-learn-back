@@ -20,6 +20,6 @@ public class AdminExamRecordController extends BaseController<ExamRecordService,
     @Override
     protected void init(HttpServletRequest request, JSONObject requestParams) {
 
-        setPageOption(createOp().fieldEq(EXAM_RECORD_ENTITY.PAPER_ID,EXAM_RECORD_ENTITY.STUDENT_USERNAME));
+        setPageOption(createOp().fieldEq(EXAM_RECORD_ENTITY.PAPER_ID,EXAM_RECORD_ENTITY.STUDENT_USERNAME).keyWordLikeFields(EXAM_RECORD_ENTITY.STUDENT_USERNAME));
     }
 }

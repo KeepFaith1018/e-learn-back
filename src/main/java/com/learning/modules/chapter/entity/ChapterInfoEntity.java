@@ -2,12 +2,17 @@ package com.learning.modules.chapter.entity;
 
 import com.learning.core.base.BaseEntity;
 import com.learning.modules.course.entity.CourseInfoEntity;
+import com.mybatisflex.annotation.RelationManyToMany;
 import com.mybatisflex.annotation.RelationManyToOne;
+import com.mybatisflex.annotation.RelationOneToMany;
 import com.mybatisflex.annotation.Table;
 
 import com.tangzc.mybatisflex.autotable.annotation.ColumnDefine;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.awt.print.Book;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,5 +32,8 @@ public class ChapterInfoEntity extends BaseEntity<ChapterInfoEntity> {
             selfField = "courseId",
             targetField = "id"
     )
-    private CourseInfoEntity courseInfo;  // 关联的课程实体
+    private CourseInfoEntity courseInfo;
+
+//    @RelationOneToMany(selfField = "id", targetField = "chapterId")
+//    private List<ChapterProgressEntity> progress;
 }

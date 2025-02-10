@@ -6,10 +6,7 @@ import com.learning.modules.chapter.entity.ChapterInfoEntity;
 import com.learning.modules.discussion.entity.DiscussionGroupEntity;
 import com.learning.modules.exam.entity.ExamPaperInfoEntity;
 import com.learning.modules.resource.entity.ResourceInfoEntity;
-import com.mybatisflex.annotation.Column;
-import com.mybatisflex.annotation.RelationOneToMany;
-import com.mybatisflex.annotation.RelationOneToOne;
-import com.mybatisflex.annotation.Table;
+import com.mybatisflex.annotation.*;
 import com.tangzc.mybatisflex.autotable.annotation.ColumnDefine;
 import lombok.Getter;
 import lombok.Setter;
@@ -68,5 +65,4 @@ public class CourseInfoEntity extends BaseEntity<CourseInfoEntity> {
             targetField = "courseId"
     )
     private List<ExamPaperInfoEntity> examPapers;
-
 }

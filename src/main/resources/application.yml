@@ -76,7 +76,7 @@ ignored:
   # 忽略后台鉴权url
   adminAuthUrls:
     - /
-    - /upload\**
+    - /dev/upload/**
     - /upload/**
     - /actuator/**
     - /download/**
@@ -152,7 +152,7 @@ cool:
     queue-capacity-multiplier: 3
 # AutoTable配置，根据实体类自动生成表
 auto-table:
-  show-banner: false
+  show-banner: true
 
 # 分布式唯一ID组件
 leaf:
