@@ -58,4 +58,7 @@ public class BaseSysUserEntity extends BaseEntity<BaseSysUserEntity> {
 
     @ColumnDefine(comment = "socketId")
     private String socketId;
+
+
+
 }

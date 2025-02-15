@@ -33,9 +33,6 @@ public class CourseInfoEntity extends BaseEntity<CourseInfoEntity> {
     @ColumnDefine(comment = "课程介绍", type = "TEXT")
     private String introduction;
 
-
-
-
     @RelationOneToOne(
             selfField = "teacherUsername",
             targetField = "username"
